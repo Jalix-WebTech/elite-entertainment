@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elite Entertainment — Premium live music, event production, concert management, wedding entertainment, DJ services, and instrument rentals in Uyo, Nigeria." />
+  <meta name="keywords" content="live entertainment, music performance, event production, concert management, wedding entertainment, corporate events, DJ services, instrument rental, sound equipment, Uyo, Nigeria, Elite Entertainment" />
+  <meta name="author" content="Jalixon" />
+  <meta name="theme-color" content="#0a1440" />
+  <meta property="og:title" content="Elite Entertainment | Premium Music & Event Production" />
+  <meta property="og:description" content="Crafting unforgettable moments through world-class live entertainment, event production, and music performance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.pexels.com/photos/761543/pexels-photo-761543.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" />
+
+  <title>Elite Entertainment | Premium Music & Event Production</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/images/logo.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- SPLASH -->
+  <div id="splash" role="status" aria-label="Loading Elite Entertainment">
+    <div class="splash-particles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="splash-scene">
+      <div class="splash-cube">
+        <div class="splash-cube-face splash-cube-front"><img src="assets/images/logo.svg" alt="Elite Entertainment Logo" /></div>
+        <div class="splash-cube-face splash-cube-back"><img src="assets/images/logo.svg" alt="" aria-hidden="true" /></div>
+        <div class="splash-cube-face splash-cube-left"><div class="splash-face-accent"><i class="fa-solid fa-music"></i></div></div>
+        <div class="splash-cube-face splash-cube-right"><div class="splash-face-accent"><i class="fa-solid fa-microphone-lines"></i></div></div>
+      </div>
+    </div>
+    <div class="splash-brand">
+      <div class="splash-name">ELITE ENTERTAINMENT</div>
+      <div class="splash-tag">Music · Events · Excellence</div>
+    </div>
+    <div class="splash-progress">
+      <div class="splash-progress-track"><div class="splash-progress-bar" id="splashBar"></div></div>
+      <span class="splash-percent" id="splashPercent">0%</span>
+    </div>
+    <div class="splash-dev">
+      <div>Developed by <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer">Jalixon</a></div>
+      <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer" class="splash-portfolio-btn">View Portfolio →</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Elite Entertainment Home"><img src="assets/images/logo.svg" alt="Elite Entertainment" /></a>
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <button class="nav-close" id="navClose" aria-label="Close navigation menu"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#home" data-num="01" class="active">Home</a>
+        <a href="#about" data-num="02">About</a>
+        <a href="#services" data-num="03">Services</a>
+        <a href="#portfolio" data-num="04">Gallery</a>
+        <a href="#ceo" data-num="05">CEO</a>
+        <a href="#leadership" data-num="06">Team</a>
+        <a href="#testimonials" data-num="07">Testimonials</a>
+        <a href="#booking" data-num="08">Booking</a>
+        <a href="#contact" data-num="09">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-float hero-float-1" aria-hidden="true"></div>
+    <div class="hero-float hero-float-2" aria-hidden="true"></div>
+    <div class="hero-float hero-float-3" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Music · Events · Excellence</div>
+      <h1 class="hero-title">Crafting <em>Unforgettable</em><br />Event Experiences</h1>
+      <p class="hero-desc">Elite Entertainment delivers world-class live performances, event production, and music entertainment — transforming every occasion into a legendary celebration that moves hearts and captivates audiences.</p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-border-all"></i> View Gallery</a>
+        <a href="#booking" class="btn btn-outline"><i class="fa-regular fa-calendar"></i> Book an Event</a>
+        <a href="https://wa.me/2340000000000?text=Hello%20Elite%20Entertainment%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span>Location</span>Uyo, Nigeria</div>
+      <div class="hero-meta-item"><span>Est.</span>Since 2009</div>
+      <div class="hero-meta-item"><span>Events</span>500+ Delivered</div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Live Performances</span><span>Concert Production</span><span>Wedding Entertainment</span><span>Corporate Events</span><span>DJ Services</span><span>Instrument Rentals</span><span>Sound Engineering</span><span>Event Coordination</span>
+      <span>Live Performances</span><span>Concert Production</span><span>Wedding Entertainment</span><span>Corporate Events</span><span>DJ Services</span><span>Instrument Rentals</span><span>Sound Engineering</span><span>Event Coordination</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section-padding" id="about">
+    <span class="section-number" aria-hidden="true">01</span>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.pexels.com/photos/19452359/pexels-photo-19452359.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=800" alt="Elite Entertainment studio with keyboard and microphone setup" loading="lazy" />
+          <div class="about-experience-badge"><strong>15+</strong><span>Years of<br/>Excellence</span></div>
+        </div>
+        <div class="about-content reveal reveal-delay-2">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">Redefining <span class="gold-text">Entertainment</span> Excellence</h2>
+          <p>Founded on the principles of passion, professionalism, and unmatched creativity, Elite Entertainment is a premier music and event entertainment company based in Akwa Ibom State, Nigeria.</p>
+          <p>We specialize in delivering world-class live performances, full-scale event production, and premium entertainment services — transforming every occasion into a memorable, show-stopping experience.</p>
+          <p>From intimate weddings to massive concerts, church programs to corporate galas, our multidisciplinary team delivers tailored entertainment solutions that exceed expectations.</p>
+          <div class="about-stats">
+            <div class="stat-item"><span class="stat-num" data-target="500">0</span><span class="stat-label">Events</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="350">0</span><span class="stat-label">Clients</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-label">Years</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="50">0</span><span class="stat-label">Awards</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-head" style="margin-top:7rem;">
+        <span class="section-label">Our Foundation</span>
+        <h2 class="section-title">Vision · Mission · <span class="gold-text">Values</span></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal"><span class="value-num">01</span><div class="value-icon"><i class="fa-solid fa-eye"></i></div><h4>Vision</h4><p>To be Africa's most sought-after entertainment brand, setting global standards in live performance, event production, and musical excellence.</p></div>
+        <div class="value-card reveal reveal-delay-1"><span class="value-num">02</span><div class="value-icon"><i class="fa-solid fa-bullseye"></i></div><h4>Mission</h4><p>Deliver unforgettable entertainment experiences through artistic mastery, technical precision, and unwavering client partnership.</p></div>
+        <div class="value-card reveal reveal-delay-2"><span class="value-num">03</span><div class="value-icon"><i class="fa-solid fa-gem"></i></div><h4>Integrity</h4><p>We uphold the highest professional standards, transparent communication, and accountability in every engagement and performance.</p></div>
+        <div class="value-card reveal reveal-delay-3"><span class="value-num">04</span><div class="value-icon"><i class="fa-solid fa-heart"></i></div><h4>Passion</h4><p>Music is our heartbeat. We pour genuine artistry and love into every note, every show, and every client interaction.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-padding" id="services">
+    <span class="section-number" aria-hidden="true">02</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Premium <span class="gold-text">Services</span></h2>
+        <p class="section-subtitle">Comprehensive music and event entertainment services delivered by seasoned professionals with uncompromising attention to detail.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal"><span class="service-num">01 / 08</span><div class="service-icon"><i class="fa-solid fa-music"></i></div><h3>Live Band Performance</h3><p>Electrifying live music from our world-class band — jazz, highlife, gospel, afrobeats, and more for any occasion.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-1"><span class="service-num">02 / 08</span><div class="service-icon"><i class="fa-solid fa-microphone-lines"></i></div><h3>Concert Production</h3><p>End-to-end concert management — stage design, sound, lighting, artist coordination, and audience experience.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-2"><span class="service-num">03 / 08</span><div class="service-icon"><i class="fa-solid fa-champagne-glasses"></i></div><h3>Wedding Entertainment</h3><p>Bespoke wedding music packages — from ceremony hymns to reception party sets that keep guests dancing all night.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-3"><span class="service-num">04 / 08</span><div class="service-icon"><i class="fa-solid fa-briefcase"></i></div><h3>Corporate Events</h3><p>Professional entertainment for conferences, product launches, gala dinners, and corporate celebrations.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal"><span class="service-num">05 / 08</span><div class="service-icon"><i class="fa-solid fa-church"></i></div><h3>Church Programs</h3><p>Anointed musical ministration and instrument support for crusades, conventions, worship nights, and special services.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-1"><span class="service-num">06 / 08</span><div class="service-icon"><i class="fa-solid fa-headphones"></i></div><h3>DJ & MC Services</h3><p>Professional DJs and MCs who read the room, control the energy, and deliver seamless event flow.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-2"><span class="service-num">07 / 08</span><div class="service-icon"><i class="fa-solid fa-guitar"></i></div><h3>Instrument Rentals</h3><p>Premium musical instruments and sound equipment available for hire — keyboards, drums, guitars, PA systems, and more.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+        <div class="service-card reveal reveal-delay-3"><span class="service-num">08 / 08</span><div class="service-icon"><i class="fa-solid fa-sliders"></i></div><h3>Sound Engineering</h3><p>Expert sound design, mixing, and live audio engineering to ensure crystal-clear sound at every venue and event.</p><i class="fa-solid fa-arrow-right service-arrow"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / GALLERY -->
+  <section class="section-padding" id="portfolio">
+    <span class="section-number" aria-hidden="true">03</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Our Gallery</span>
+        <h2 class="section-title">Event <span class="gold-text">Highlights</span></h2>
+        <p class="section-subtitle">Explore moments captured from our concerts, weddings, corporate galas, and live performances across Nigeria.</p>
+      </div>
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="concerts">Concerts</button>
+        <button class="filter-btn" data-filter="weddings">Weddings</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="church">Church</button>
+        <button class="filter-btn" data-filter="studio">Studio</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- CEO -->
+  <section class="section-padding" id="ceo">
+    <span class="section-number" aria-hidden="true">04</span>
+    <div class="container">
+      <div class="ceo-grid">
+        <div class="ceo-image reveal">
+          <img src="https://images.pexels.com/photos/29995605/pexels-photo-29995605.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=900" alt="Chief Executive Officer, Elite Entertainment" loading="lazy" />
+          <div class="ceo-badge"><h5>Chief Executive</h5><p>Founder &amp; Creative Director</p></div>
+        </div>
+        <div class="ceo-info reveal reveal-delay-2">
+          <span class="section-label">Executive Leadership</span>
+          <h2>Meet Our <span class="gold-text">CEO</span></h2>
+          <h3 class="ceo-name">[CEO Name]</h3>
+          <div class="ceo-role">Founder · Creative Director · Music Producer</div>
+          <p class="ceo-bio">A visionary entertainer and music producer with over two decades of distinguished practice, our CEO founded Elite Entertainment with a singular mission: to redefine the African entertainment landscape through world-class performances and event production.</p>
+          <p class="ceo-bio">An accomplished musician, band leader, and event strategist, the CEO brings a rare synthesis of creative genius, technical mastery, and business acumen. Having produced landmark events across West Africa — from sold-out concerts to state-level celebrations — each engagement is a testament to entertainment's power to unite communities.</p>
+          <blockquote class="ceo-message">Music is not merely sound — it is the language of the human soul. At Elite Entertainment, we don't just perform at events; we create moments that echo in hearts forever, bridging cultures and igniting joy across our great continent.</blockquote>
+          <span class="ceo-signature">— [CEO Name]</span>
+          <div class="ceo-experience">
+            <div class="ceo-exp-item"><i class="fa-solid fa-award"></i><div><strong>20+</strong><span>Years Experience</span></div></div>
+            <div class="ceo-exp-item"><i class="fa-solid fa-trophy"></i><div><strong>50+</strong><span>Awards Won</span></div></div>
+            <div class="ceo-exp-item"><i class="fa-solid fa-globe"></i><div><strong>500+</strong><span>Events Delivered</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <section class="section-padding" id="leadership">
+    <span class="section-number" aria-hidden="true">05</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Our People</span>
+        <h2 class="section-title">Leadership <span class="gold-text">Team</span></h2>
+        <p class="section-subtitle">Meet the experienced leaders driving creative excellence, operational precision, and strategic growth at Elite Entertainment.</p>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-padding" id="testimonials">
+    <span class="section-number" aria-hidden="true">06</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">What Our <span class="gold-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonials-wrap">
+        <button class="testimonial-nav testimonial-prev" id="tPrev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="testimonial-nav testimonial-next" id="tNext" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="testimonials-viewport"><div class="testimonials-track" id="testimonialsTrack"></div></div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section-padding" id="booking">
+    <span class="section-number" aria-hidden="true">07</span>
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-info reveal">
+          <span class="section-label">Book Us</span>
+          <h2 class="section-title">Plan Your <span class="gold-text">Event</span></h2>
+          <p>Ready to create an unforgettable experience? Book Elite Entertainment for your next event. Pricing is tailored to each occasion's scope, requirements, and production needs.</p>
+          <div class="booking-feature"><i class="fa-solid fa-shield-halved"></i><div><h4>Confidential Planning</h4><p>Your event details are treated with absolute discretion. NDAs available on request for high-profile events.</p></div></div>
+          <div class="booking-feature"><i class="fa-solid fa-handshake"></i><div><h4>Flexible Packages</h4><p>Custom pricing adapted to your budget, event size, venue, and entertainment requirements.</p></div></div>
+          <div class="booking-feature"><i class="fa-solid fa-bolt"></i><div><h4>Rapid Response</h4><p>Dedicated event coordinator assigned within 24 hours of your booking inquiry.</p></div></div>
+        </div>
+        <form class="booking-form reveal reveal-delay-2" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="bName">Full Name *</label><input type="text" id="bName" required autocomplete="name" placeholder="Your full name" /></div>
+            <div class="form-group"><label for="bPhone">Phone Number *</label><input type="tel" id="bPhone" required autocomplete="tel" placeholder="+234..."/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="bEmail">Email Address *</label><input type="email" id="bEmail" required autocomplete="email" placeholder="you@email.com" /></div>
+            <div class="form-group"><label for="bType">Event Type *</label>
+              <select id="bType" required>
+                <option value="">-- Select event type --</option>
+                <option>Wedding</option><option>Concert / Show</option><option>Corporate Event</option>
+                <option>Church Program</option><option>Birthday / Private Party</option><option>Instrument Rental</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="bBudget">Budget Range</label>
+              <select id="bBudget">
+                <option value="">-- Select range --</option>
+                <option>Below ₦500,000</option><option>₦500K – ₦2 Million</option><option>₦2M – ₦5 Million</option>
+                <option>₦5M – ₦10 Million</option><option>₦10 Million+</option><option>Negotiable</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="bDate">Event Date</label><input type="date" id="bDate" /></div>
+          </div>
+          <div class="form-group"><label for="bMsg">Event Details / Message</label><textarea id="bMsg" rows="4" placeholder="Tell us about your event — venue, expected guests, entertainment needs, special requests..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:.5rem;"><i class="fa-brands fa-whatsapp"></i> Submit via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-padding" id="contact">
+    <span class="section-number" aria-hidden="true">08</span>
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Create <span class="gold-text">Together</span></h2>
+        <p class="section-subtitle">Visit our studio, connect on WhatsApp, or send us an email. We respond within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="https://www.google.com/maps/search/Nung+Ikono+Ufok+Uruan+Akwa+Ibom" target="_blank" rel="noopener noreferrer" class="contact-card reveal"><i class="fa-solid fa-location-dot"></i><h4>Visit Us</h4><p>Nung Ikono Ufok, Uruan L.G.A.<br/>Akwa Ibom State, Uyo, Nigeria</p></a>
+        <a href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-1"><i class="fa-brands fa-whatsapp"></i><h4>WhatsApp</h4><p>Chat Instantly<br/>Available 24/7</p></a>
+        <a href="mailto:info@eliteentertainment.com" class="contact-card reveal reveal-delay-2"><i class="fa-solid fa-envelope"></i><h4>Email</h4><p>info@eliteentertainment.com<br/>Response within 24 hours</p></a>
+        <div class="contact-card reveal reveal-delay-3"><i class="fa-regular fa-clock"></i><h4>Business Hours</h4><p>Mon – Fri: 8:00 – 18:00<br/>Sat: 9:00 – 14:00</p></div>
+      </div>
+      <div class="map-placeholder" role="img" aria-label="Map showing Elite Entertainment location">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <div><strong style="color:var(--text-primary); font-family:'Playfair Display',serif; font-size:1.2rem;">Elite Entertainment Headquarters</strong></div>
+        <div>Uyo, Akwa Ibom State, Nigeria</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo"><img src="assets/images/logo.svg" alt="Elite Entertainment" /></a>
+          <p>Premium music and event entertainment company. Crafting unforgettable moments through world-class live performances across Africa.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Navigate</h5><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Gallery</a></li><li><a href="#ceo">CEO</a></li><li><a href="#leadership">Team</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul><li><a href="#services">Live Band</a></li><li><a href="#services">Concert Production</a></li><li><a href="#services">Wedding Entertainment</a></li><li><a href="#services">DJ & MC</a></li><li><a href="#services">Instrument Rental</a></li></ul></div>
+        <div class="footer-col"><h5>Company</h5><ul><li><a href="#contact">Contact</a></li><li><a href="#booking">Book an Event</a></li><li><a href="#testimonials">Client Reviews</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="yr"></span> Elite Entertainment. All rights reserved.</div>
+        <div>Developed by <a href="https://jalixon.vercel.app/" target="_blank" rel="noopener noreferrer">Jalixon</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2340000000000?text=Hello%20Elite%20Entertainment!" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with Elite Entertainment on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- CHATBOT -->
+  <button class="chatbot-float" id="chatbotToggle" aria-label="Open AI Assistant"><i class="fa-solid fa-robot"></i><span class="notif-dot" aria-hidden="true"></span></button>
+  <div class="chatbot-overlay" id="chatbotOverlay" aria-hidden="true"></div>
+  <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Elite Entertainment AI Assistant" aria-modal="true">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div><h4>Elite AI</h4><span>● Online — Ask me anything</span></div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages"></div>
+    <div class="chatbot-quick" id="chatQuick">
+      <button data-q="What services do you offer?">Services</button>
+      <button data-q="How much does it cost?">Pricing</button>
+      <button data-q="How do I book an event?">Booking</button>
+      <button data-q="Where are you located?">Location</button>
+      <button data-q="Show me your event gallery">Gallery</button>
+      <button data-q="Tell me about the team">Team</button>
+      <button data-q="I want to speak to someone">Human Agent</button>
+    </div>
+    <form class="chatbot-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your message..." aria-label="Type your message" maxlength="300" autocomplete="off" />
+      <button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" id="lbNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    <img id="lbImage" src="" alt="Event preview" />
+    <div class="lightbox-caption" id="lbCaption"></div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
