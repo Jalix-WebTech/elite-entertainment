@@ -357,9 +357,7 @@ ul { list-style: none; }
 .about-image:hover img { transform: scale(1.04); }
 .about-image::after { content: ''; position: absolute; inset: 0; border: 1px solid var(--accent-gold); transform: translate(22px, 22px); border-radius: 4px; z-index: -1; transition: transform .6s; }
 .about-image:hover::after { transform: translate(28px, 28px); }
-.about-experience-badge { position: absolute; top: 30px; right: -20px; background: var(--accent-gold); color: #fff; padding: 1.2rem 1.5rem; border-radius: 4px; box-shadow: var(--shadow-lg); text-align: center; z-index: 3; }
-.about-experience-badge strong { display: block; font-family: 'Playfair Display', serif; font-size: 2.4rem; line-height: 1; }
-.about-experience-badge span { font-size: .68rem; text-transform: uppercase; letter-spacing: .15em; font-weight: 600; display: block; margin-top: .3rem; }
+
 .about-content p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8; }
 .about-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border-subtle); }
 .stat-item { text-align: left; position: relative; padding-left: 1rem; border-left: 2px solid var(--accent-gold); }
@@ -725,7 +723,6 @@ body.chatbot-locked {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .section-number { font-size: 6rem; top: 2rem; }
   .hero-meta { display: none; }
-  .about-experience-badge { right: 20px; top: 20px; }
   .chatbot-float { right: 1rem; bottom: 6rem; width: 52px; height: 52px; }
   .whatsapp-float { right: 1rem; bottom: 1rem; width: 54px; height: 54px; }
   .whatsapp-float::after { display: none; }
@@ -748,8 +745,6 @@ body.chatbot-locked {
   .testimonial-text { font-size: 1.05rem; }
   .testimonial-nav { display: none; }
   .booking-form { padding: 2rem 1.5rem; }
-  .about-experience-badge { padding: .8rem 1rem; top: 15px; right: 15px; }
-  .about-experience-badge strong { font-size: 1.6rem; }
   .toast-container { right: 1rem; left: 1rem; top: 90px; }
   .toast { min-width: unset; }
   .nav-logo img { height: 32px; }

@@ -246,93 +246,83 @@
     if (e.key === 'ArrowRight') openLightbox(lbIdx + 1);
   });
 
-  /* ========== LEADERSHIP TEAM ========== */
-  const ceoPhoto = 'https://images.pexels.com/photos/29995605/pexels-photo-29995605.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600';
-  const teamData = [
-    {
-      name: 'Adaeze Okonkwo',
-      position: 'Director of Operations',
-      badge: 'Director',
-      photo: ceoPhoto,
-      bio: 'Oversees event logistics, vendor coordination, and operational strategy to ensure every show runs flawlessly.',
-      email: 'adaeze@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    },
-    {
-      name: 'Emeka Nwachukwu',
-      position: 'Music Director',
-      badge: 'Director',
-      photo: ceoPhoto,
-      bio: 'Leads musical arrangements, rehearsals, and live performance quality across all band engagements and studio sessions.',
-      email: 'emeka@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    },
-    {
-      name: 'Uduak Essien',
-      position: 'Director of Finance',
-      badge: 'Director',
-      photo: ceoPhoto,
-      bio: 'Drives financial planning, contract negotiations, and revenue strategy to sustain long-term organizational growth.',
-      email: 'uduak@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    },
-    {
-      name: 'Ngozi Ibe',
-      position: 'Marketing Manager',
-      badge: 'Manager',
-      photo: ceoPhoto,
-      bio: 'Crafts brand positioning, social media campaigns, and public relations that elevate Elite Entertainment\'s market presence.',
-      email: 'ngozi@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    },
-    {
-      name: 'Ifeanyi Chukwuemeka',
-      position: 'Talent & HR Manager',
-      badge: 'Manager',
-      photo: ceoPhoto,
-      bio: 'Champions talent scouting, musician development, and team culture to attract and retain top-tier entertainment professionals.',
-      email: 'ifeanyi@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    },
-    {
-      name: 'Aniekan Udoh',
-      position: 'Business Development Manager',
-      badge: 'Manager',
-      photo: ceoPhoto,
-      bio: 'Forges strategic partnerships, secures high-value bookings, and expands the company\'s footprint across West Africa.',
-      email: 'aniekan@eliteentertainment.com',
-      social: { facebook: '#', twitter: '#', instagram: '#' }
-    }
-  ];
+ /* ========== LEADERSHIP TEAM ========== */
 
-  const teamGrid = $('#teamGrid');
-  teamGrid.innerHTML = teamData.map((m, i) => {
-    const delay = i % 3;
-    const socialHtml = (platform, icon, label) =>
-      m.social[platform] ? `<a href="${sanitize(m.social[platform])}" target="_blank" rel="noopener noreferrer" aria-label="${label}" data-tooltip="${label}"><i class="fa-brands fa-${icon}"></i></a>` : '';
+// Team Photos
+const directorPhoto = './assets/images/director.jpeg';
+const managerPhoto = './assets/images/manager.png';
+const ambassadorPhoto = './assets/images/ambassador.jpeg';
 
-    return `
+const teamData = [
+  {
+    name: 'Raphael Edem',
+    position: 'Director of Operations',
+    badge: 'Director',
+    photo: directorPhoto,
+    bio: 'Oversees event logistics, vendor coordination, and operational strategy to ensure every show runs flawlessly.',
+    email: 'director@eliteentertainment.com',
+    social: { facebook: '#', twitter: '#', instagram: '#' }
+  },
+  {
+    name: 'Patience Etim',
+    position: 'Manager',
+    badge: 'Manager',
+    photo: managerPhoto,
+    bio: 'Leads musical arrangements, rehearsals, and live performance quality across all band engagements and studio sessions.',
+    email: 'manager@eliteentertainment.com',
+    social: { facebook: '#', twitter: '#', instagram: '#' }
+  },
+  {
+    name: 'Jacinta Akpan',
+    position: 'Ambassador & Partnerships',
+    badge: 'Ambassador',
+    photo: ambassadorPhoto,
+    bio: 'Drives financial planning, contract negotiations, and revenue strategy to sustain long-term organizational growth.',
+    email: 'ambassador@eliteentertainment.com',
+    social: { facebook: '#', twitter: '#', instagram: '#' }
+  }
+];
+
+
+const teamGrid = $('#teamGrid');
+teamGrid.innerHTML = teamData.map((m, i) => {
+  const delay = i % 3;
+
+  const socialHtml = (platform, icon, label) =>
+    m.social[platform]
+      ? `<a href="${sanitize(m.social[platform])}" target="_blank" rel="noopener noreferrer" aria-label="${label}" data-tooltip="${label}"><i class="fa-brands fa-${icon}"></i></a>`
+      : '';
+
+  return `
     <article class="team-card reveal${delay ? ' reveal-delay-' + delay : ''}" aria-label="${sanitize(m.name)}, ${sanitize(m.position)}">
       <div class="team-photo">
         <img src="${sanitize(m.photo)}" alt="${sanitize(m.name)} — ${sanitize(m.position)}, Elite Entertainment" loading="lazy" />
         <span class="team-role-badge">${sanitize(m.badge)}</span>
       </div>
+
       <div class="team-body">
         <h3 class="team-name">${sanitize(m.name)}</h3>
         <div class="team-position">${sanitize(m.position)}</div>
+
         <p class="team-bio">${sanitize(m.bio)}</p>
+
         <div class="team-footer">
           <div class="team-socials">
-            <a href="mailto:${sanitize(m.email)}" aria-label="Email ${sanitize(m.name)}" data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="mailto:${sanitize(m.email)}" aria-label="Email ${sanitize(m.name)}" data-tooltip="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
             ${socialHtml('facebook', 'facebook-f', 'Facebook')}
             ${socialHtml('twitter', 'x-twitter', 'X / Twitter')}
             ${socialHtml('instagram', 'instagram', 'Instagram')}
           </div>
+
           <span class="team-contact-label">Connect</span>
         </div>
       </div>
-    </article>`;
-  }).join('');
+    </article>
+  `;
+}).join('');
 
   // Register team cards for scroll reveal
   $$('.team-card.reveal').forEach(el => revealObs.observe(el));
