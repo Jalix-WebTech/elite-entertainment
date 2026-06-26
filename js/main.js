@@ -277,7 +277,7 @@ const teamData = [
     position: 'Ambassador & Partnerships',
     badge: 'Ambassador',
     photo: ambassadorPhoto,
-    bio: 'Drives financial planning, contract negotiations, and revenue strategy to sustain long-term organizational growth.',
+    bio: 'Builds strategic partnerships, represents the brand at industry events, and cultivates relationships that expand our reach, influence, and business opportunities.',
     email: 'ambassador@eliteentertainment.com',
     social: { facebook: '#', twitter: '#', instagram: '#' }
   }
