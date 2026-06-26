@@ -249,7 +249,7 @@
  /* ========== LEADERSHIP TEAM ========== */
 
 // Team Photos
-const directorPhoto = './assets/images/director.jpeg';
+const directorPhoto = './assets/images/Director.jpeg';
 const managerPhoto = './assets/images/manager.png';
 const ambassadorPhoto = './assets/images/ambassador.jpeg';
 
